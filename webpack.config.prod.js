@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -72,6 +73,9 @@ module.exports = {
     },
     watch: true,
     plugins: [
+        new webpack.DefinePlugin({
+          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'production')
+        }),
         new HtmlWebpackPlugin({
             template: path.resolve(rootPath, './index.html')
         }),
