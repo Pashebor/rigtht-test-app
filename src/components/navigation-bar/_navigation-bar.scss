@@ -1,0 +1,43 @@
+.navigation-bar{
+  display: flex;
+  flex-flow: row wrap;
+  &-list{
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 0 0 25px;
+    &__item{
+      display: block;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      height: 64px;
+      border-bottom-color: $second-theme-color;
+      transition: all 0.3s ease-in-out;
+      box-sizing: border-box;
+      &:not(:first-child) {
+        margin-left: 51px;
+      }
+      a{
+        line-height: 64px;
+        color: white;
+        opacity: 0.65;
+        text-decoration: none;
+        letter-spacing: 0.7px;
+        transition: all 0.3s ease;
+      }
+      &--active{
+        border-bottom: 4px solid $second-theme-color;
+        a{
+          opacity: 1;
+        }
+      }
+      &:hover{
+        a{
+          opacity: 1;
+        }
+        border-bottom: 4px solid $second-theme-color;
+      }
+    }
+  }
+}

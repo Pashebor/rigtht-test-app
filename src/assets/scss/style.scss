@@ -2,28 +2,98 @@
 @import "fonts";
 @import "variables";
 @import "icons";
+@import "./../../components/layout/header";
+@import "./../../components/layout/footer";
 @import "../../components/elements/elements";
+@import "../../components/navigation-bar/navigation-bar";
+@import "../../components/sidebars/sidebars";
+@import "../../components/calendar/calendar";
 
 body{
   @include main-theme-font-regular;
   font-size: 16px;
+  background: #f4f4f7;
 }
 
-.app{
-  display: flex;
+.container{
+  max-width: 1024px;
+  width: 100%;
+  margin: auto;
 }
 
 .title{
-  @include main-theme-font-regular;
   text-align: center;
-  &::before{
-    padding-right: 10px;
-  }
-  &::after{
-    font-family: FontAwesome, sans-serif;
-    @include heart-icon;
-    font-size: 30px;
-    color: red;
-    padding-left: 10px;
+}
+
+.pagination{
+  margin-top: 20px;
+  list-style: none;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  &__item{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    text-align: center;
+    line-height: 30px;
+    a{
+      text-decoration: none;
+      color: $second-theme-font-color;
+    }
+    &--active{
+      background-color: $main-theme-color;
+      a{
+        color: white;
+      }
+    }
   }
 }
+
+.logo{
+  display: block;
+  background-size: contain;
+  background: url(../images/logo.png) no-repeat;
+  max-width: 244px;
+  width: 100%;
+  &-small{
+    width: 64px;
+    background: url("../images/sublogo.png");
+    margin-left: auto;
+  }
+}
+
+.content-area{
+  display: flex;
+  justify-content: space-between;
+  padding: 64px 0;
+}
+
+.content{
+  max-width: 752px;
+  width: 100%;
+}
+
+.button{
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background: $buttons-color;
+  height: 54px;
+  line-height: 54px;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.7px;
+  outline: none;
+  border: none;
+  transition: background 0.3s ease;
+  &:hover{
+    background-color: $main-theme-color;
+  }
+}
+
+@import 'mobile-styles';

@@ -1,13 +1,18 @@
 import React from 'react';
-import DefaultButton from './elements/buttons/DefaultButton';
+import Header  from './layout/Header';
+import Main  from './layout/Main';
+import RightSideBar from './sidebars/RightSideBar'
 
 class MyApp extends React.Component{
     render() {
         return(
-            <main>
-                <h1 className={'title icon icon-heart'}>Hello Juli!</h1>
-                <DefaultButton message={'I\'m here now !'} />
-            </main>
+          <React.Fragment>
+            <Header/>
+            <div className={'content-area container'}>
+              <Main/>
+              <RightSideBar/>
+            </div>
+          </React.Fragment>
         )
     }
 }

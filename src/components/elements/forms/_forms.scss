@@ -1,0 +1,22 @@
+.form{
+  &-default{
+    width: 100%;
+    margin-bottom: 32px;
+    input[type=text] {
+      display: block;
+      width: inherit;
+      font-size: 14px;
+      box-sizing: border-box;
+      height: 54px;
+      margin: 0 0 10px;
+      padding: 0 16px;
+      border: none;
+      outline: 2px solid transparent;
+      transition: all .5s ease-in-out;
+      background-color: white;
+      &:focus{
+        outline: 2px solid $second-theme-color;
+      }
+    }
+  }
+}

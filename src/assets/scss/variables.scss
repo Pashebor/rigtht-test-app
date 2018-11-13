@@ -1,4 +1,16 @@
+//Colors
+$main-theme-color: #1aacff;
+$second-theme-color: #8dd6ff;
+$third-theme-color: #19ACFF;
+$main-theme-font-color: #222;
+$second-theme-font-color: #292d38;
+$buttons-color: #9ea9aa;
+
 @mixin main-theme-font-regular{
-  font-family: OpenSansRegular, sans-serif;
+  font-family: RobotoRegular, sans-serif;
   font-weight: normal;
+}
+
+@mixin main-theme-font-thin{
+  font-family: RobotoThin, sans-serif;
 }
